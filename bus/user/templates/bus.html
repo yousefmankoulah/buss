@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for bus in bus %}
+<style media="screen">
+  .bus{
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    background-color: #F8F9FA;
+    width: 900px;
+
+  }
+</style>
+  <div class="bus text-center">
+    <h3 class="lead">Bus Direction: {{bus.bus_direction}}</h3>
+    <h3 class="lead">Bus Number: {{bus.bus_number}}</h3>
+    <h3 class="lead">Bus Time: {{bus.bus_time}}</h3>
+
+  </div>
+  {% endfor %}
+{% endblock %}

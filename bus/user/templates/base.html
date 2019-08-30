@@ -1,0 +1,295 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Knowledge Bus a Travel Category Bootstrap Responsive Website Template | Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Go Bus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- bootstrap-css -->
+	<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!--// bootstrap-css -->
+	<!-- css -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+	<!--// css -->
+	<!-- font-awesome icons -->
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<!-- gallery -->
+	<link href='{% static "css/simplelightbox.min.css" %}' rel='stylesheet' type='text/css'>
+	<!-- //gallery -->
+	<!-- font -->
+	<link href="http://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+		rel="stylesheet">
+	<!-- //font -->
+	<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+	<script type="text/javascript">
+	/*loading screen*/
+	$(window).on("load", function () {
+	//loading element
+	$(".loading-overlay h1").fadeOut(100, function () {
+	  $(this).parent().fadeOut(100, function () {
+
+	    $(this).remove();
+	  });
+	});
+	});
+	/*loading screen*/
+
+	</script>
+	<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<!--start loading overlay-->
+	<section class="loading-overlay">
+	<h1 class="alert alert-danger fade in">    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	this page is loading now</h3>
+
+
+	<div class="sk-circle">
+	  <div class="sk-circle1 sk-child"></div>
+	  <div class="sk-circle2 sk-child"></div>
+	  <div class="sk-circle3 sk-child"></div>
+	  <div class="sk-circle4 sk-child"></div>
+	  <div class="sk-circle5 sk-child"></div>
+	  <div class="sk-circle6 sk-child"></div>
+	  <div class="sk-circle7 sk-child"></div>
+	  <div class="sk-circle8 sk-child"></div>
+	  <div class="sk-circle9 sk-child"></div>
+	  <div class="sk-circle10 sk-child"></div>
+	  <div class="sk-circle11 sk-child"></div>
+	  <div class="sk-circle12 sk-child"></div>
+	</div>
+
+
+	</section>
+
+	<!--end loading overlay-->
+	<!-- banner -->
+	<div class="banner jarallax">
+		<div class="header">
+			<div class="header-left">
+				<div class="agileinfo-phone">
+					<p><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +1 234 567 8901</p>
+				</div>
+				<div class="agileinfo-phone agileinfo-map">
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i> 123 T.Globel Place,London</p>
+				</div>
+				<div class="search-grid">
+					<form action="#" method="post">
+						<input type="text" placeholder="Search" class="big-dog" name="Subscribe" required="">
+						<button class="btn1"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="w3-header-bottom">
+			<div class="w3layouts-logo">
+				<h1>
+					<a href="index.html">Knowledge Bus</a>
+				</h1>
+			</div>
+			<div class="top-nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="first-list"><a class="active" href="{% url 'home' %}">Home</a></li>
+							<li><a href="#about" class="scroll">About</a></li>
+							<li><a href="#gallery" class="scroll">Gallery</a></li>
+							<li><a href="#team" class="scroll">Team</a></li>
+							<li><a href="#blog" class="scroll">Blog</a></li>
+							{% if request.user.is_authenticated %}
+							<li><a href="{% url 'bus' %}" class="scroll">Buses</a></li>
+							<li><a href="{% url 'login' %}" class="scroll">Logout</a></li>
+							{% else %}
+							<li><a href="{% url 'login' %}" class="scroll">Sign In</a></li>
+							{% endif %}
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+				</nav>
+			</div>
+			<div class="agileinfo-social-grids">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-rss"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="banner-info">
+			<div class="container">
+				<div class="w3-banner-info">
+					<div class="slider">
+						<div class="callbacks_container">
+							<ul class="rslides callbacks callbacks1" id="slider4">
+								<li>
+									<div class="w3layouts-banner-info">
+										<h3><span>Bus</span></h3>
+										<p>by building a wonderful institution that inspires others.</p>
+										<div class="w3ls-button">
+											<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="w3layouts-banner-info">
+										<h3><span>Knowledge</span></h3>
+										<p>Giveing people solutions that facilitate and improve their lives</p>
+										<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="clearfix"> </div>
+						<script>
+							// You can also use "$(window).load(function() {"
+							$(function () {
+								// Slideshow 4
+								$("#slider4").responsiveSlides({
+									auto: true,
+									pager: true,
+									nav: false,
+									speed: 400,
+									namespace: "callbacks",
+									before: function () {
+										$('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+										$('.events').append("<li>after event fired.</li>");
+									}
+								});
+
+							});
+						</script>
+						<!--banner Slider starts Here-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- footer -->
+  <footer>
+    <div class="w3ls-footer-grids">
+      <div class="container">
+        <div class="col-md-3 w3l-footer one">
+          <h3>About Company</h3>
+          <p> We’re trying to solve the problem of high transportation fares for lowincome university students as well as the low quality of the available facilities.
+          </p>
+          <p class="adam">- Muhmmed Medhat, CEO</p>
+          <div class="clearfix"></div>
+        </div>
+        <div class="col-md-3 w3l-footer one tweet">
+          <h3>Tweets</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i>Race cars are machines, horses are living breathing animals with personality. Yet they're both extremely powerful and in a cult of their own. Love speed?
+                Watch two racing professionals share their passion
+                <i>http//twitter.com</i></a>
+              <span>About 15 minutes ago<span>
+                </span></span></li>
+
+          </ul>
+        </div>
+        <div class="col-md-3 w3l-footer two">
+          <h3>Keep Connected</h3>
+          <ul>
+            <li><a class="fb" href="#"><i class="fa fa-facebook"></i>Like us on Facebook</a></li>
+            <li><a class="fb1" href="#"><i class="fa fa-twitter"></i>Follow us on Twitter</a></li>
+            <li><a class="fb2" href="#"><i class="fa fa-google-plus"></i>Add us on Google Plus</a></li>
+            <li><a class="fb3" href="#"><i class="fa fa-dribbble"></i>Follow us on Dribbble</a></li>
+            <li><a class="fb4" href="#"><i class="fa fa-pinterest-p"></i>Follow us on Pinterest</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 w3l-footer three">
+          <h3>Contact Information</h3>
+          <ul>
+            <li><i class="fa fa-map-marker"></i>
+              <p>The company name <span>Knowladge Bus,</span>ElBahr Street. </p>
+              <div class="clearfix"></div>
+            </li>
+            <li><i class="fa fa-phone"></i>
+              <p>1234567890</p>
+              <div class="clearfix"></div>
+            </li>
+            <li><i class="fa fa-envelope-o"></i><a href="mailto:info@example.com">muhmmedmedhat0@gmail.com</a>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="copy-right-grids">
+      <div class="container">
+        <div class="copy-left">
+          <p class="footer-gd">© 2019 Knowledge Bus. All Rights Reserved | Design by <a
+              href="#" target="_blank">Medhat</a></p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+  <script src="{% static 'js/responsiveslides.min.js' %}"></script>
+  <script src="{% static 'js/jarallax.js' %}"></script>
+  <script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+  <script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+      speed: 0.5,
+      imgWidth: 1366,
+      imgHeight: 768
+    })
+  </script>
+
+  <script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+  <!-- here stars scrolling icon -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+        };
+      */
+
+      $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+  </script>
+  <!-- //here ends scrolling icon -->
+</body>
+
+</html>
